@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AnularformsComponent } from './anularforms/anularforms.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'helper',
     loadChildren: () => import('./helper/helper.module').then(m => m.HelperModule)
+  },
+  {
+    path:'angularforms',
+    component:AnularformsComponent
   }
 ];
 

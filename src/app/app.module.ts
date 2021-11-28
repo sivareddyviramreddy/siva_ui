@@ -4,17 +4,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AnularformsComponent } from './anularforms/anularforms.component';
+import { FormsModule } from '@angular/forms';
+import{HttpClientModule} from'@angular/common/http'
 import { ReactformComponent } from './reactform/reactform.component';
-
 @NgModule({
   declarations: [
     AppComponent,
-    ReactformComponent
+    AnularformsComponent,
+    ReactformComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

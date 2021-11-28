@@ -1,0 +1,35 @@
+<p>reactform works!</p>
+
+<form [formGroup]="myform" >
+  <input [class.is-invalid]="myform.get('name')!.invalid && myform.get('name')!.touched "
+   type="text" formControlName="name" 
+  class="form-control" placeholder="Enter Name" required="">
+  <div *ngIf="myform.get('name')!.invalid && myform.get('name')!.touched">
+  <small class="text-danger"*ngIf="myform.get('name')!.invalid "> name is required</small>
+  <small class="text-danger"*ngIf="myform.get('name')!.errors?.minlength "> length must be 3 digits</small>
+  <small class="text-danger"*ngIf="myform.get('name')!.errors?.forbiddenName "> Usernamenot allowed</small>
+  </div>
+
+<input type="email" placeholder="Enter email" formControlName="email" class="form-control"
+[class.is-invalid]="myform.get('email')!.invalid && myform.get('email')!.touched">
+<small class="text-danger"[class.d-none]="myform.get('email')!.valid && myform.get('email')!.untouched">Email is required</small>
+  <input type="checkbox" formControlName="box">
+  <label>Subscribe mw</label>
+
+
+  <input type="password" formControlName="pass" class="form-control" placeholder="Enter Password">
+
+
+  <input type="password" formControlName="confirmpassword" [class.is-invalid]="myform.errors?.mismatch"
+  class="form-control" placeholder="Confirm Password">
+  <small class="text-danger" *ngIf="myform.errors?.mismatch">confirm password mismatch</small>
+
+
+  <div formGroupName="address">
+    <input type="text" formControlName="city" class="form-control" placeholder="Enter City">
+    <input type="text" formControlName="state" class="form-control" placeholder="Enter State">
+    <input type="number" formControlName="pincode" class="form-control" placeholder="Enter Pincode">
+  
+  </div>
+  <button type="submit">submit</button>
+</form>

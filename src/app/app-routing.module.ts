@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnularformsComponent } from './anularforms/anularforms.component';
+import { ParentComponent } from './parent/parent.component';
 import { ReactformComponent } from './reactform/reactform.component';
 
 const routes: Routes = [
@@ -23,7 +24,12 @@ const routes: Routes = [
   {
     path:'reactform',
     component:ReactformComponent
+  },
+  {
+    path:'parent',
+    component:ParentComponent
   }
+  
 ];
 
 @NgModule({

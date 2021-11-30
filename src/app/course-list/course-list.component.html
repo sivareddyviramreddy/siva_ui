@@ -1,1 +1,4 @@
 <p>course-list works!</p>
+<ol *ngFor="let x of data" (click)="params(x)">
+    <li><span class="btn btn-primary">{{x.id}}</span><span class="btn btn-success">{{x.course}}</span></li>
+</ol>

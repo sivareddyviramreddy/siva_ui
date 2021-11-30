@@ -12,8 +12,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 @NgModule({
-  declarations: [AppComponent, AnularformsComponent, ReactformComponent, ParentComponent, ChildComponent, CourseListComponent, CourseDetailsComponent],
+  declarations: [AppComponent, AnularformsComponent, ReactformComponent, ParentComponent, ChildComponent, CourseListComponent, CourseDetailsComponent, PagenotfoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
